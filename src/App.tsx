@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import reactLogo from '../public/react.svg'
+import reactLogo from '/react.svg'
 import viteLogo from '/vite.svg'
-import './css/App.css'
+import R from "@components";
 
 function App() {
+
   const [count, setCount] = useState(0)
 
   return (
@@ -16,7 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1><R.FirstSample name="Rashed" msg="You are a Ducker"/></h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
