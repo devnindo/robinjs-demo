@@ -3,7 +3,7 @@ import reactLogo from '/react.svg'
 import viteLogo from '/vite.svg'
 import R from "@components";
 
-function App() {
+function AppRoot() {
 
   const [count, setCount] = useState(0)
 
@@ -33,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default AppRoot
