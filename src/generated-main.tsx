@@ -10,7 +10,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import AppRoot from './app-root.tsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import routeIndex from './root-route-index'
+import routeIndex from './route-index.ts'
 
 const router = createBrowserRouter(routeIndex);
 
