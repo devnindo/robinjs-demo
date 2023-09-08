@@ -1,4 +1,4 @@
-import FirstSample from "./first-sample.tsx";
+import FirstSample from './first-sample'
 
 
 export default {

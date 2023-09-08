@@ -1,21 +1,26 @@
-import { useState } from 'react'
+import {useState} from 'react'
+import {Provider as StoreProvider} from 'jotai'
 import reactLogo from '/react.svg'
 import viteLogo from '/vite.svg'
-import R from "@components"
-import useRobinUtils from './robinjs/utils'
+import R from '@components'
+import {useScreenSize} from './robinjs/utils/index'
+import Temp from '@/temp/Temp'
 
 function AppRoot() {
 
   const [count, setCount] = useState(0)
-  const { cookie, platform, screen, storage } = useRobinUtils()
+    // const { cookie, platform, screen, storage } = useRobinUtils()
+    const screen = useScreenSize()
 
-  cookie.set('jadu', 'madu')
-  console.log(cookie.getAll())
-  console.log('platform', platform.is.firefox, platform.version)
-  console.log('screen', screen.gt.sm, screen.width, screen.height)
+
+    // cookie.set('jadu', 'madu')
+    // console.log(cookie.getAll())
+    // console.log('platform', platform.is.firefox, platform.version)
+    console.log('screen-app', screen.gt.sm, screen.width, screen.height)
 
   return (
-    <>
+      <StoreProvider>
+          <Temp/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -36,7 +41,7 @@ function AppRoot() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+      </StoreProvider>
   )
 }
 

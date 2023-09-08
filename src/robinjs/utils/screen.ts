@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import {atom, useAtom} from 'jotai'
+import {useEffect} from 'react'
 
 type ScreenSize = {
     width: number,
@@ -29,35 +30,40 @@ type ScreenSize = {
     xl: boolean
 }
 
-function useScreenSize() {
-    const [screenSize, setScreenSize] = useState<ScreenSize>({
-        width: 0,
-        height: 0,
-        name: 'xs',
-        sizes: {
-            sm: 600,
-            md: 1024,
-            lg: 1440,
-            xl: 1920
-        },
-        lt: {
-            sm: true,
-            md: true,
-            lg: true,
-            xl: true
-        },
-        gt: {
-            xs: false,
-            sm: false,
-            md: false,
-            lg: false
-        },
-        xs: true,
+const screenSizeAtom = atom<ScreenSize>({
+    width: 0,
+    height: 0,
+    name: 'xs',
+    sizes: {
+        sm: 600,
+        md: 1024,
+        lg: 1440,
+        xl: 1920
+    },
+    lt: {
+        sm: true,
+        md: true,
+        lg: true,
+        xl: true
+    },
+    gt: {
+        xs: false,
         sm: false,
         md: false,
-        lg: false,
-        xl: false
-    })
+        lg: false
+    },
+    xs: true,
+    sm: false,
+    md: false,
+    lg: false,
+    xl: false
+})
+
+function useScreenSize() {
+    console.log('initializing screen')
+
+
+    const [screenSize, setScreenSize] = useAtom(screenSizeAtom)
 
     useEffect(() => {
         function detect() {
@@ -86,7 +92,7 @@ function useScreenSize() {
                 name = 'xl'
             }
 
-            setScreenSize(prev => ({
+            setScreenSize((prev: ScreenSize) => ({
                 ...prev,
                 width,
                 height,
@@ -113,7 +119,7 @@ function useScreenSize() {
         return () => {
             window.removeEventListener('resize', detect)
         }
-    }, [screenSize.sizes])
+    }, [screenSize, setScreenSize])
 
     return screenSize
 }

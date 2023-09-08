@@ -1,4 +1,4 @@
-function useLocalStorage() {
+function LocalStorage() {
     const getStorage = (key: string): string | null => {
         return localStorage.getItem(key)
     }
@@ -33,4 +33,4 @@ function useLocalStorage() {
     }
 }
 
-export default useLocalStorage
+export default LocalStorage
