@@ -129,6 +129,10 @@ class ScreenSizeManager {
         }
     }
 
+    getCurrentSize(): ScreenSize {
+        return this.screenSize
+    }
+
     private notify(): void {
         for (const callback of this.subscribers) {
             callback(this.screenSize)
