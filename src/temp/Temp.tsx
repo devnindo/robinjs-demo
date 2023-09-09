@@ -1,8 +1,9 @@
-import {useScreenSize} from '@/robinjs/utils'
+import { screen } from '@/robinjs/utils/index'
 
 function Temp() {
-    const screen = useScreenSize()
-    console.log('screen-temp', screen.gt.sm, screen.width, screen.height)
+    screen.subscribe(size => {
+        console.log('temp-', size.height, size.width)
+    })
     return (
         <>
         </>

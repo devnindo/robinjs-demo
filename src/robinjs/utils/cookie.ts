@@ -1,12 +1,23 @@
-function useCookie() {
-    const getCookie = (name: string): string | null => {
+class CookieManager {
+    private static instance: CookieManager
+
+    private constructor() { }
+
+    static getInstance() {
+        if (!CookieManager.instance) {
+            CookieManager.instance = new CookieManager()
+        }
+        return CookieManager.instance
+    }
+
+    get(name: string): string | null {
         const value = "; " + document.cookie
         const parts = value.split("; " + name + "=")
         if (parts.length === 2) return parts.pop()?.split(";").shift() || null
         return null
     }
 
-    const setCookie = (name: string, value: string, days?: number, path?: string, domain?: string, secure?: boolean) => {
+    set(name: string, value: string, days?: number, path?: string, domain?: string, secure?: boolean) {
         let cookie = name + "=" + value + ";"
 
         if (days) {
@@ -30,20 +41,20 @@ function useCookie() {
         document.cookie = cookie
     }
 
-    const deleteCookie = (name: string, path?: string, domain?: string) => {
-        setCookie(name, "", -1, path, domain)
+    delete(name: string, path?: string, domain?: string) {
+        this.set(name, "", -1, path, domain)
     }
 
-    const hasCookie = (name: string): boolean => {
-        return getCookie(name) !== null
+    has(name: string): boolean {
+        return this.get(name) !== null
     }
 
-    const getAllCookies = (): Record<string, string> => {
+    getAll(): Record<string, string> {
         const cookies: Record<string, string> = {}
-        const cookieArray = document.cookie.split(';')
+        const cookieArray = document.cookie.split(";")
 
         cookieArray.forEach(cookieStr => {
-            const parts = cookieStr.split('=')
+            const parts = cookieStr.split("=")
             if (parts.length === 2) {
                 cookies[parts[0].trim()] = parts[1].trim()
             }
@@ -51,14 +62,6 @@ function useCookie() {
 
         return cookies
     }
-
-    return {
-        get: getCookie,
-        set: setCookie,
-        delete: deleteCookie,
-        has: hasCookie,
-        getAll: getAllCookies
-    }
 }
 
-export default useCookie
+export default CookieManager.getInstance()

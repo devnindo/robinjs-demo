@@ -1,40 +1,9 @@
-import { useState, useEffect } from 'react'
 import UAParser from 'ua-parser-js'
 
-type Platform = {
-    is: {
-        ios: boolean,
-        android: boolean,
-        windowsPhone: boolean,
-        mac: boolean,
-        windows: boolean,
-        linux: boolean,
-        ipad: boolean,
-        kindle: boolean,
-        silk: boolean,
-        blackberry: boolean,
-        firefox: boolean,
-        electron: boolean,
-        capacitor: boolean,
-        cordova: boolean,
-        vivaldi: boolean,
-        edge: boolean,
-        opera: boolean
-    },
-    has: {
-        touch: boolean,
-        webStorage: boolean,
-        webGL: boolean,
-        serviceWorker: boolean,
-        cookies: boolean,
-        indexedDB: boolean
-    },
-    version: string
-}
+class PlatformDetector {
+    private static instance: PlatformDetector | null = null
 
-
-function usePlatformDetector(): Platform {
-    const [platform, setPlatform] = useState<Platform>({
+    private platform = {
         is: {
             ios: false,
             android: false,
@@ -52,7 +21,7 @@ function usePlatformDetector(): Platform {
             cordova: false,
             vivaldi: false,
             edge: false,
-            opera: false
+            opera: false,
         },
         has: {
             touch: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
@@ -60,12 +29,23 @@ function usePlatformDetector(): Platform {
             webGL: !!window.WebGLRenderingContext,
             serviceWorker: 'serviceWorker' in navigator,
             cookies: false,
-            indexedDB: 'indexedDB' in window
+            indexedDB: 'indexedDB' in window,
         },
-        version: '0'
-    })
+        version: '0',
+    };
 
-    useEffect(() => {
+    constructor() {
+        this.detectPlatform()
+    }
+
+    static getInstance() {
+        if (!PlatformDetector.instance) {
+            PlatformDetector.instance = new PlatformDetector()
+        }
+        return PlatformDetector.instance
+    }
+
+    detectPlatform() {
         const parser = new UAParser()
         parser.setUA(navigator.userAgent)
 
@@ -107,18 +87,20 @@ function usePlatformDetector(): Platform {
             }
         } catch (e) { }
 
-        setPlatform({
+        this.platform = {
             is,
             has: {
-                ...platform.has,
+                ...this.platform.has,
                 cookies: hasCookies,
                 webStorage: hasWebStorage,
             },
             version,
-        })
-    }, [])
+        }
+    }
 
-    return platform
+    getPlatform() {
+        return this.platform
+    }
 }
 
-export default usePlatformDetector
+export default PlatformDetector.getInstance()
