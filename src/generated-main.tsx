@@ -2,8 +2,8 @@
  *  NEED TO BE GENERATED
  * */
 
-import './css/index.css'
-import './css/App.css'
+import './css/index.scss'
+import './css/app.scss'
 
 
 import React from 'react'
