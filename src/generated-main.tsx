@@ -2,7 +2,6 @@
  *  NEED TO BE GENERATED
  * */
 
-import './css/index.scss'
 import './css/app.scss'
 
 
