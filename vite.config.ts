@@ -9,10 +9,13 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
       '@commons': path.resolve(__dirname, './src/commons'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@main': path.resolve(__dirname, "./src/main")
+      '@main': path.resolve(__dirname, "./src/main"),
+      '@robin': path.resolve(__dirname, "./src/robin-js/")
     },
   },
   plugins: [react()],
+
+
   server: {
     open: true,
     port: 3000

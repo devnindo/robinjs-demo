@@ -12,7 +12,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@components": ["src/components"],
-      "@main": ["src/main"]
+      "@main": ["src/main"],
+      "@robin": ["src/robin-js"]
     },
 
     /* Bundler mode */

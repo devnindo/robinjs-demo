@@ -1,0 +1,9 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.suggest{
+  background-color: #00acc1;
+}
