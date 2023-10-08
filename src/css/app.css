@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.suggest{
-  background-color: #00acc1;
-}
+
+
+/* -- Changing default font color
+html {
+  @apply text-gray-800
+}*/

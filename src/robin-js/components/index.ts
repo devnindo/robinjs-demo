@@ -1,8 +1,11 @@
 import Base from "./containers/base";
 import FlexDiv from "./containers/flex-div";
+import Typography from "./typography"
 
-
-export {
+export default {
     // containers
-    Base, FlexDiv
+    Base,
+    FlexDiv,
+    ...Typography
 }
+

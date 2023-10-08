@@ -13,7 +13,7 @@
       "@/*": ["src/*"],
       "@components": ["src/components"],
       "@main": ["src/main"],
-      "@robin": ["src/robin-js"]
+      "@robin/": ["src/robin-js/*"]
     },
 
     /* Bundler mode */
