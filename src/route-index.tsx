@@ -7,7 +7,7 @@ import Home from '@main/home/index'
  * */
 export default [
     {
-        path: '/',
+        path: '',
         element: <Home />
     }
 ];

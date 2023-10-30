@@ -1,9 +1,9 @@
 import {createContext, useContext} from 'react'
-import defaultConfig from "@/robin-js/theme/default-config";
-import ThemeConfig from "./type-config";
+import defaultTheme from "./default-theme";
+import ThemeConfig from "./theme-df";
 
 
-export const ThemeContext = createContext(defaultConfig);
+export const ThemeContext = createContext(defaultTheme);
 
 function mergeConfig(configA, configB)
 {
@@ -16,10 +16,10 @@ function mergeConfig(configA, configB)
         let configVal = configB[key];
         if(configVal)
         {
-            mergedConfig[key] = {...defaultConfig[key], ...configVal}
+            mergedConfig[key] = {...defaultTheme[key], ...configVal}
         }
         else
-            mergedConfig[key] = defaultConfig[key];
+            mergedConfig[key] = defaultTheme[key];
     }
 }
 
@@ -32,8 +32,8 @@ export function RobinThemeProvider({config, children})
 {
     let merged = undefined;
     if(config)
-        merged = mergeConfig(defaultConfig, config);
-    else merged = defaultConfig;
+        merged = mergeConfig(defaultTheme, config);
+    else merged = defaultTheme;
 
     return (<ThemeContext.Provider  value={merged}>{children}</ThemeContext.Provider >)
 

@@ -8,7 +8,6 @@ import '@/css/app.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AppRoot from './app-root.tsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import routeIndex from './route-index.tsx'
 import {RobinThemeProvider} from "@robin/theme";
@@ -21,6 +20,5 @@ ReactDOM.createRoot(document.getElementById('app-root')!).render(
       <RobinThemeProvider>
         <RouterProvider router={router} />
       </RobinThemeProvider>
-      {/* <AppRoot />*/}
   </React.StrictMode>,
 )

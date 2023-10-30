@@ -1,6 +1,6 @@
-import ThemeConfig from "@/robin-js/theme/type-config";
+import ThemeConfig from "@/robin-js/theme/theme-df";
 
-const defaultConfig:ThemeConfig = {
+const defaultTheme:ThemeConfig = {
     color: {
         action: 'indigo-700',
         accent: 'cyan-500',
@@ -28,4 +28,4 @@ const defaultConfig:ThemeConfig = {
     }*/
 }
 
-export default defaultConfig;
+export default defaultTheme;

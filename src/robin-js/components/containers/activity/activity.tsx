@@ -21,12 +21,13 @@ export default function Activity({header, footer, page}) {
         /*Activity ROOT*/
         <div className="activity w-full h-full bg-gray-50">
             <div className="activity-header w-full h-14 bg-white fixed shadow-black-100 shadow-lg">
-                <Base>
+
+                {/*<Base>
                     <FlexDiv.Between  className="space-x-4 h-full bg-amber-50">
                         <AppLogo  />
                          <div className="w-12"><button>NAV 1</button></div>
                     </FlexDiv.Between>
-                </Base>
+                </Base>*/}
              </div>
             <div className="activity-page pt-14">
                 <Base className="bg-blue-50">

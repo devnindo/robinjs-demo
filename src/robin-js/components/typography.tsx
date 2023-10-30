@@ -3,8 +3,8 @@ import {joinClz} from "../utils";
 
 const TextCaption = ({className, children})=>
 {
-    let {text} = useRobinThemeContext();
-    console.log(text);
+    const theme = useRobinThemeContext();
+
 
     return (<div className={joinClz("text-sm", className)}>{children}</div>)
 }
