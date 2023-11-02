@@ -5,7 +5,7 @@ import {joinClz} from "@/robin-js/utils";
 export   function FlexBar({children, className})
 {
     return (
-        <div className={joinClz("flex flex-row items-center")}>
+        <div className={joinClz("flex flex-row items-center", className)}>
             {children}
         </div>
     )

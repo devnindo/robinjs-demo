@@ -1,39 +1,44 @@
-import {useRobinThemeContext} from "../theme";
 import {joinClz} from "../utils";
 
-const TextCaption = ({className, children})=>
+export function TextCaption({className, children})
 {
-    const theme = useRobinThemeContext();
-
-
-    return (<div className={joinClz("text-sm", className)}>{children}</div>)
+    return (<div className={joinClz("text-sm text-gray-500", className)}>{children}</div>)
 }
 
-const TextRegular = ({className, children}) =>
+export function TextRegular({className, children})
 {
-    return (<p className={joinClz("text-base", className)}>{children}</p>)
+    return (<p className={joinClz("text-lg", className)}>{children}</p>)
 }
 
-const TextBig = ({className, children}) =>
+export function TextBig({className, children})
 {
-    return (<div className={joinClz("text-lg", className)}>{children}</div>)
+    return (<div className={joinClz("text-2xl", className)}>{children}</div>)
 }
 
-const TitleH1 = ({className, children}) =>
+export function TitleH1({className, children})
 {
-    return (<h1 className={joinClz("text-2xl font-bold", className)}>{children}</h1>)
+    return (<h1 className={joinClz("text-5xl font-bold", className)}>{children}</h1>)
 }
 
-const TitleH2 = ({className, children}) =>
+export function TitleBig({className, children})
 {
-    return (<h2 className={joinClz("text-xl font-bold", className)}>{children}</h2>)
+    return (<h1 className={joinClz("text-6xl font-bold", className)}>{children}</h1>)
 }
 
-const TitleH3 = ({className, children}) =>
+export function TitleH2 ({className, children})
 {
-    return (<h3 className={joinClz("text-lg font-bold", className)}>{children}</h3>)
+    return (<h2 className={joinClz("text-3xl font-bold", className)}>{children}</h2>)
 }
 
-export default {
-    TextCaption, TextRegular, TextBig, TitleH1, TitleH2, TitleH3
+export function TitleH3({className, children})
+{
+    return (<h3 className={joinClz("text-xl font-bold", className)}>{children}</h3>)
+}
+
+export function CloudGradient({className, children})
+{
+    return (
+        <span className={joinClz("bg-gradient-to-r from-cyan-400  to-green-400 inline-block text-transparent bg-clip-text", className)}>
+            {children}
+        </span>)
 }

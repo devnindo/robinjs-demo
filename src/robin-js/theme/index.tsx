@@ -1,19 +1,19 @@
 import {createContext, useContext} from 'react'
 import defaultTheme from "./default-theme";
-import ThemeConfig from "./theme-df";
+import ThemeDef from "./theme-df";
 
 
-export const ThemeContext = createContext(defaultTheme);
+export const ThemeContext = createContext<ThemeDef>(defaultTheme);
 
-function mergeConfig(configA, configB)
+function mergeTheme(themeA, themeB)
 {
-    let mergedConfig:ThemeConfig = {};
+    let mergedConfig:ThemeDef = {};
 
     // what if provided config is not given => undefined
 
-    for(const key in configA)
+    for(const key in themeA)
     {
-        let configVal = configB[key];
+        let configVal = themeB[key];
         if(configVal)
         {
             mergedConfig[key] = {...defaultTheme[key], ...configVal}
@@ -32,7 +32,7 @@ export function RobinThemeProvider({config, children})
 {
     let merged = undefined;
     if(config)
-        merged = mergeConfig(defaultTheme, config);
+        merged = mergeTheme(defaultTheme, config);
     else merged = defaultTheme;
 
     return (<ThemeContext.Provider  value={merged}>{children}</ThemeContext.Provider >)
