@@ -18,7 +18,11 @@ type ThemeConfig = {
     {
         button_radius: string | 'rounded' | 'round',
         card_radius: string | 'round'
-
+    },
+    grid?:{
+        gap_sm: '',
+        gap_md: '',
+        gap_lg: ''
     }
     text?:{
         title: string;

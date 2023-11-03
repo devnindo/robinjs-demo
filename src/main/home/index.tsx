@@ -9,7 +9,8 @@ import {
     TitleH3, TitleBig, CloudGradient, FlexBar
 } from "@/robin-js/components"
 import {useRobinThemeContext} from "@/robin-js/theme";
-import FeatureSection from "@/main/home/feature-section";
+import SectionPlatform from "@/main/home/section-platform";
+import SectionDB from "@/main/home/section-db";
 
 export default function Home({header, footer, page}) {
     const theme = useRobinThemeContext()
@@ -35,8 +36,9 @@ export default function Home({header, footer, page}) {
                      </TextBig>
                  </div>
                 <div className="p-4">
-                    <FeatureSection />
+                    <SectionPlatform />
                 </div>
+                <SectionDB className="p-4 sm:px-24 sm:py-20" />
 
             </Base>
         </div>

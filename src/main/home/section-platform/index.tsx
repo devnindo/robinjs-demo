@@ -1,7 +1,6 @@
 import {FlexGrid} from "@/robin-js/components";
-import FeatureBrand from "@/main/home/feature-section/feature-brand";
-import FeatureApp from "@/main/home/feature-section/feature-app";
-import {Fragment} from "react";
+import FeatureBrand from "./feature-brand";
+import FeatureApp from "./feature-app";
 
 
 export default function FeatureSection(){
