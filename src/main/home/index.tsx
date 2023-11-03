@@ -1,4 +1,4 @@
-import AppLogo from "@/commons/app-logo";
+
 import {
     Base,
     TextRegular,
@@ -7,7 +7,7 @@ import {
     TextCaption,
     TitleH2,
     TitleH3, TitleBig, CloudGradient, FlexBar
-} from "@/robin-js/components"
+} from "@robin/components"
 import {useRobinThemeContext} from "@/robin-js/theme";
 import SectionPlatform from "@/main/home/section-platform";
 import SectionDB from "@/main/home/section-db";

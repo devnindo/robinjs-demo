@@ -10,10 +10,10 @@
     /* Alias settings*/
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "@components": ["src/components"],
-      "@main": ["src/main"],
-      "@robin/": ["src/robin-js/*"]
+      "@/*": ["./src/*"],
+      "@components": ["./src/components"],
+      "@main": ["./src/main"],
+      "@robin/": ["./src/robin-js/*"]
     },
 
     /* Bundler mode */
