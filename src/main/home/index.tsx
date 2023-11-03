@@ -18,7 +18,7 @@ export default function Home({header, footer, page}) {
     return (<div >
             <Base className="">
                 <FlexBar className="justify-between p-4">
-                    <img className="w-44" src="src/assets/app-logo.png"></img>
+                    <img className="w-44" src="/app-logo.png"></img>
                     <button className="bg-indigo-600 shadow-indigo-200 shadow-sm py-2 px-4 text-white shape-capsule rounded-sm font-medium hover:bg-indigo-500 transition-all">
                         Contact Us
                     </button>
