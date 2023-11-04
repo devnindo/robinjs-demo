@@ -1,8 +1,13 @@
 
 import {joinClz} from "@/robin-js/utils";
+import {ReactNode} from "react";
 
+type CommonProp = {
+    children: ReactNode;
+    className:string
+}
 
-export   function FlexBar({children, className})
+export   function FlexBar({children, className = ""}: CommonProp)
 {
     return (
         <div className={joinClz("flex flex-row items-center", className)}>
