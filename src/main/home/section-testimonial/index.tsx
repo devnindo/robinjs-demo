@@ -19,8 +19,8 @@ export default function Index()
                     designation="EVP, Guardian Life Insurance Ltd."
                 />
                 <Testimonial
-                    quote="As part of digitization, We needed many ETL work on our existing data.
-                PeddleCloud has helped us achieving this very smoothly with a neat deployment process"
+                    quote="Well managed database system is always an important part of our infrastructure.
+                     PeddleCloud has helped us deploy a disaster proven, secured and scalable system."
                     fullName="Mohammad Aktaruzzaman"
                     thumbSrc="/testimonial/aktarazzuman.png"
                     designation="CFO, Markentile Life Insurance Ltd."
