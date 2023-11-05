@@ -11,11 +11,12 @@ import {
 import {useRobinThemeContext} from "@/robin-js/theme";
 import SectionPlatform from "@/main/home/section-platform";
 import SectionDB from "@/main/home/section-db";
+import SectionTestimonial from "@/main/home/section-testimonial"
 
 export default function Home({header, footer, page}) {
     const theme = useRobinThemeContext()
 
-    return (<div >
+    return (<div className="pb-16">
             <Base className="">
                 <FlexBar className="justify-between p-4">
                     <img className="w-44" src="/app-logo.png"></img>
@@ -39,7 +40,7 @@ export default function Home({header, footer, page}) {
                     <SectionPlatform />
                 </div>
                 <SectionDB className="p-4 sm:px-24 sm:py-20" />
-
+                <SectionTestimonial className="p-4 sm:px-24 sm:py-20"/>
             </Base>
         </div>
         /*PeddleCloud Home*/
