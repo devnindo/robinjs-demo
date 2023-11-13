@@ -8,7 +8,8 @@ export type TestimonialProp = {
 }
 
 
-export function Testimonial({fullName, designation, thumbSrc, quote})
+
+export function Testimonial({fullName, designation, thumbSrc, quote}:TestimonialProp)
 {
     return (
         <figure className="relative">
