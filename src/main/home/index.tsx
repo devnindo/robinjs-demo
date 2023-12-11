@@ -34,7 +34,7 @@ export default function Home({header, footer, page}) {
                          High-quality Secured Software that scale
                      </TitleH2>
                      <TextBig className="text-gray-500 mt-4">
-                         PeddleCloud design and develop mobile apps, cloud platforms and experiences. We work with an array of clients, from global brands and big enterprise to innovative startups and funded ventures.
+                         PeddleCloud design and develop mobile apps, web platforms and experiences. We work with an array of clients, from global brands and big enterprise to innovative startups and funded ventures.
                      </TextBig>
                  </div>
 
