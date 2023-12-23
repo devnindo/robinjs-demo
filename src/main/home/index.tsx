@@ -31,7 +31,7 @@ export default function Home({header, footer, page}) {
                          <CloudGradient >Cloud</CloudGradient>
                      </TitleBig>*/}
                      <TitleH1 className="mt-8 text-center">
-                         High-quality Secured Software that scale
+                        High-quality Secured Software that scale
                      </TitleH1>
                      <TextBig className="text-gray-500 mt-4">
                          PeddleCloud design and develop mobile apps, web platforms and experiences. We work with an array of clients, from global brands and big enterprise to innovative startups and funded ventures.
