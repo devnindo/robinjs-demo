@@ -30,7 +30,7 @@ export default function Home({header, footer, page}) {
                          <span className="text-slate-100  ">Peddle</span>
                          <CloudGradient >Cloud</CloudGradient>
                      </TitleBig>*/}
-                     <TitleH1 className="mt-8 text-center">
+                     <TitleH1 className="mt-8 text-center pb-2">
                         High-quality Secured Software that scale
                      </TitleH1>
                      <TextBig className="text-gray-500 mt-4">
