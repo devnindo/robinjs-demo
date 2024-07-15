@@ -17,7 +17,7 @@ export default defineConfig({
       '@commons': path.resolve(__dirname, './src/commons'),
       '@components': path.resolve(__dirname, './src/components'),
       '@main': path.resolve(__dirname, "./src/main"),
-      '@robin': path.resolve(__dirname, "./src/robin-js")
+      '@robin': path.resolve(__dirname, "./src/robin")
     },
   },
   plugins: [react()],

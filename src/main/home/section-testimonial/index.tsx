@@ -1,5 +1,5 @@
 import {Testimonial} from "./testomonial";
-import {FlexGrid, TextBig, TextRegular, TitleH3} from "@/robin-js/components";
+import {FlexGrid, TextBig, TextRegular, TitleH3} from "@/robin/components";
 
 
 export default function Index({className})

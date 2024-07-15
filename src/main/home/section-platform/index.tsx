@@ -1,4 +1,4 @@
-import {FlexGrid} from "@/robin-js/components";
+import {FlexGrid} from "@/robin/components";
 import FeatureBrand from "./feature-brand";
 import FeatureApp from "./feature-app";
 

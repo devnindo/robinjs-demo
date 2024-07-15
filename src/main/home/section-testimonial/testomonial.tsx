@@ -1,4 +1,4 @@
-import {TextBig, TextRegular} from "@/robin-js/components";
+import {TextBig, TextRegular} from "@/robin/components";
 
 export type TestimonialProp = {
     fullName : string,

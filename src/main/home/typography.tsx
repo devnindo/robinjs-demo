@@ -1,5 +1,5 @@
-import {useRobinThemeContext} from "@/robin-js/theme";
-import {Base, TextBig, TextRegular, TitleH1, TitleH2, TitleH3} from "@/robin-js/components";
+import {useRobinThemeContext} from "@/robin/theme";
+import {Base, TextBig, TextRegular, TitleH1, TitleH2, TitleH3} from "@/robin/components";
 
 export default function Home({header, footer, page}) {
     const theme = useRobinThemeContext()

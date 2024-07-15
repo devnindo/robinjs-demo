@@ -1,10 +1,10 @@
-import {joinClz} from "@/robin-js/utils";
-import {Base, FlexGrid} from "@/robin-js/components";
+import {joinClz} from "@/robin/utils";
+import {Base, FlexGrid} from "@/robin/components";
 
 
 export default function PageFooter()
 {
-    return (<Base className="text-white p-4 py-16 bg-gradient-to-r bg-purple-800 bg-indigo-600">
+    return (<Base className="text-white p-4 py-16 bg-gradient-to-r to-purple-800 from-indigo-600">
         <FlexGrid>
             <div className="text-grey-7">
                 <div className="font-bold q-mb-xs">CONTACT US</div>

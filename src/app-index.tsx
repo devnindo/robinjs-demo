@@ -9,7 +9,7 @@ import '@/css/app.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import routeIndex from './route-index.tsx'
+import routeIndex from './main/route-index.tsx'
 import {RobinThemeProvider} from "@robin/theme";
 
 

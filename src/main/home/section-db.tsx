@@ -1,4 +1,4 @@
-import {FlexGrid, TextBig, TitleH2} from "@/robin-js/components";
+import {FlexGrid, TextBig, TitleH2} from "@/robin/components";
 
 
 export default function SectionDB({className})

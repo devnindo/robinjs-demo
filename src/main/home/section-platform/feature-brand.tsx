@@ -1,5 +1,5 @@
-import {joinClz} from "@/robin-js/utils";
-import {TextRegular, TitleH3} from "@/robin-js/components";
+import {joinClz} from "@/robin/utils";
+import {TextRegular, TitleH3} from "@/robin/components";
 
 export type ItemProp = {
     name : string,

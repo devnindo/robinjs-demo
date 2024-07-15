@@ -8,7 +8,7 @@ import {
     TitleH2,
     TitleH3, TitleBig, CloudGradient, FlexBar
 } from "@robin/components"
-import {useRobinThemeContext} from "@/robin-js/theme";
+import {useRobinThemeContext} from "@/robin/theme";
 import SectionPlatform from "@/main/home/section-platform";
 import SectionDB from "@/main/home/section-db";
 import SectionTestimonial from "@/main/home/section-testimonial"
